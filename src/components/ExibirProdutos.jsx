@@ -36,13 +36,15 @@ export function ExibirProdutos() {
           });
     },[])
     return (
-        <section className=" h-screen bg-neutral-200 pt-10">
-            <div className="w-full flex-wrap  mx-auto flex justify-center ">
+        <section className=" h-screen bg-white pt-10">
+            <div className="w-full  flex-wrap  mx-auto flex lg:justify-normal justify-center ">
                 {/* <p>{produtos}</p> */}
                 {produtos.map((item)=>(
                     <CardProduto nome={item.name} preco={item.preco} image={item.linkImage} ></CardProduto>
                 ))
                 }
+                <CardProduto></CardProduto>
+                <CardProduto></CardProduto>
             </div>
         </section>
     )
