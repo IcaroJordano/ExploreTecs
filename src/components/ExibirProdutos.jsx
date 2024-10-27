@@ -32,8 +32,8 @@ export function ExibirProdutos() {
 )
           .then((res) => {
             const post=((res.data.data.allProdutos))
-            Context.setNumber(post)
             localStorage.setItem('dataApi',JSON.stringify(post))
+            Context.setNumber(JSON.parse(localStorage.getItem('dataApi')))
             console.log()
           }).then(()=>{
           })
