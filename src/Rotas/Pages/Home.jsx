@@ -22,8 +22,8 @@ export function Home() {
         Context.number[0].preco=111
         // localStorage()
         // console.log(novoObjeto)
-        console.log(Context.number)
-        localStorage.setItem('dataApi',JSON.stringify(novoObjeto))
+        // console.log(Context.number)
+        // localStorage.setItem('dataApi',JSON.stringify(novoObjeto))
     }
     // mudar()
     return (

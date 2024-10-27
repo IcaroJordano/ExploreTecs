@@ -8,43 +8,50 @@ import ProductsProvider, { ProductsContext } from "../Context/ProductsContext";
 import axios from "axios";
 
 export function ExibirProdutos() {
-    const Context=useContext(ProductsContext)
-    const [produtos,setProdutos]=useState([])
-    useEffect(()=>{
-        axios.post(
-            'https://graphql.datocms.com/',
-            {
-                query: `{
+  const Context = useContext(ProductsContext)
+  let check = false
+  useEffect(() => {
+    if (localStorage.getItem('dataApi') === null) {
+      console.log('nao a dados')
+      check = true
+    }
+    else {
+      console.log('tem dados')
+    }
+  }, [])
+  useEffect(() => {
+    if (check) {
+      axios.post(
+        'https://graphql.datocms.com/',
+        {
+          query: `{
                     allProdutos{
                         linkImage
                         name
                         preco
                     }
                 }`
-            },
-            {
-                headers: {
+        },
+        {
+          headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
             'Authorization': `Icaro Jordano d26af1aed529c01033f2abecbcd798`,
           }
+        }
+      )
+        .then((res) => {
+          const post = ((res.data.data.allProdutos))
+          localStorage.setItem('dataApi', JSON.stringify(post))
+          Context.setNumber(JSON.parse(localStorage.getItem('dataApi')))
+          console.log()
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
-)
-          .then((res) => {
-            const post=((res.data.data.allProdutos))
-            localStorage.setItem('dataApi',JSON.stringify(post))
-            Context.setNumber(JSON.parse(localStorage.getItem('dataApi')))
-            console.log()
-          }).then(()=>{
-          })
-          // .then((resp)=>{
-          //   localStorage.setItem('dataApi',JSON.stringify(resp.data.data['allProdutos'][0]))
-          // })
-        //   .then(()=>{
-        //     Context.setNumber(produtos)
-        //   })
-          .catch((error) => {
-            console.log(error);
-          });
-    },[])
+    else(
+      Context.setNumber(JSON.parse(localStorage.getItem('dataApi')))
+    )
+  }, [])
 }
