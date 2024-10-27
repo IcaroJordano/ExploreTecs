@@ -4,7 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { Rotas } from "./Rotas/Rotas";
 
 function App() {
-
+  ExibirProdutos()
   return (
     <Router>
       <Navbar></Navbar>

@@ -1,10 +1,14 @@
 import { useEffect } from "react";
-import { CardProduto } from "./CardProduto";
-import { useState } from "react";
+
+import { useContext, useState } from "react"
+// import { ProductsContext } from "../../Context/ProductsContext"
+
+import ProductsProvider, { ProductsContext } from "../Context/ProductsContext";
 
 import axios from "axios";
 
 export function ExibirProdutos() {
+    const Context=useContext(ProductsContext)
     const [produtos,setProdutos]=useState([])
     useEffect(()=>{
         axios.post(
@@ -29,22 +33,15 @@ export function ExibirProdutos() {
           .then((res) => {
             console.log(res.data)
             setProdutos(res.data.data['allProdutos'])
-            console.log(produtos[0])
+            Context.setNumber(res.data.data['allProdutos'])
+            console.log(Context.number[0])
+
           })
+        //   .then(()=>{
+        //     Context.setNumber(produtos)
+        //   })
           .catch((error) => {
             console.log(error);
           });
     },[])
-    return (
-        <section className=" h-screen bg-white pt-10">
-            <div className="w-full  flex-wrap  mx-auto flex lg:justify-normal justify-center ">
-                {produtos.map((item)=>(
-                    <CardProduto nome={item.name} preco={item.preco} image={item.linkImage} ></CardProduto>
-                ))
-                }
-                <CardProduto></CardProduto>
-                <CardProduto></CardProduto>
-            </div>
-        </section>
-    )
 }

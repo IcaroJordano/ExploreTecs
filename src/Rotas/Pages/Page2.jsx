@@ -6,8 +6,8 @@ export function Page2() {
 
     return(
         <section>
-            <h1>Page2 {Context.number}</h1>
-            {/* <button>Render Products</button> */}
+            <h1>Page2 {Context.number[0].name}</h1>
+            <h2>Page2 {Context.number[0].preco}</h2>
             <div>
                 
             </div>
