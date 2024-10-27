@@ -31,12 +31,15 @@ export function ExibirProdutos() {
     }
 )
           .then((res) => {
-            console.log(res.data)
-            setProdutos(res.data.data['allProdutos'])
-            Context.setNumber(res.data.data['allProdutos'])
-            console.log(Context.number[0])
-
+            const post=((res.data.data.allProdutos))
+            Context.setNumber(post)
+            localStorage.setItem('dataApi',JSON.stringify(post))
+            console.log()
+          }).then(()=>{
           })
+          // .then((resp)=>{
+          //   localStorage.setItem('dataApi',JSON.stringify(resp.data.data['allProdutos'][0]))
+          // })
         //   .then(()=>{
         //     Context.setNumber(produtos)
         //   })
