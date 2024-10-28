@@ -1,6 +1,6 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
-import { Rotas } from "./Rotas/Rotas";
+import { Rotas } from "./components/Rotas/Rotas";
 // import {ExibirProdutos} from "./components/ExibirProdutos"
 
 function App() {

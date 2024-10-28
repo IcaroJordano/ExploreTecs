@@ -1,5 +1,5 @@
 import { useContext, useState } from "react"
-import { ProductsContext } from "../../Context/ProductsContext"
+import { ProductsContext } from "../../../Context/ProductsContext"
 
 export function Page2() {
     const Context=useContext(ProductsContext)
