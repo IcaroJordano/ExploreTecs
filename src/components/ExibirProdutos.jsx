@@ -44,14 +44,15 @@ export function ExibirProdutos() {
           const post = ((res.data.data.allProdutos))
           localStorage.setItem('dataApi', JSON.stringify(post))
           Context.setNumber(JSON.parse(localStorage.getItem('dataApi')))
-          console.log()
+          console.log('chamou api')
         })
         .catch((error) => {
           console.log(error);
         });
     }
-    else(
+    else{
       Context.setNumber(JSON.parse(localStorage.getItem('dataApi')))
-    )
+      console.log("nao foi necessario chamar api")
+  }
   }, [])
 }
