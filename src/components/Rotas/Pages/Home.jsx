@@ -1,29 +1,18 @@
-import Carousel from 'react-bootstrap/Carousel';
+// import Carousel from 'react-bootstrap/Carousel';
 import imagem from '../../../images/imagem.jpeg'
+// import { Button, ButtonGroup, Navbar } from 'react-bootstrap';
 
 export function Home() {
     return (
         <section>
-            <nav aria-label="Navegação de página exemplo">
-                <ul className="pagination">
-                    <li className="page-item"><a className="page-link" href="#">Anterior</a></li>
-                    <li className="page-item"><a className="page-link" href="#">1</a></li>
-                    <li className="page-item"><a className="page-link" href="#">2</a></li>
-                    <li className="page-item"><a className="page-link" href="#">3</a></li>
-                    <li className="page-item"><a className="page-link" href="#">Próximo</a></li>
-                </ul>
-            </nav>
-            <Carousel>
-                <Carousel.Item>
-                    <img className="d-block w-100" src={imagem} alt="Primeiro Slide" />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img className="d-block w-100" src={imagem} alt="Segundo Slide" />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img className="d-block w-100" src={imagem} alt="Terceiro Slide" />
-                </Carousel.Item>
-            </Carousel>
+            <div class="card" className='w-1/2' >
+                <img class="card-img-top" src={imagem} alt="Imagem de capa do card"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Título do card</h5>
+                        <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                        <a href="#" class="btn btn-primary">Visitar</a>
+                    </div>
+            </div>
         </section>
     );
 }
