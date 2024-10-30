@@ -1,34 +1,23 @@
-// import Button from 'react-bootstrap/Button';
-// import Container from 'react-bootstrap/Container';
-// import Form from 'react-bootstrap/Form';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
+import Navbar from 'react-bootstrap/Navbar';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-function NavScrollExample() {
+
+function Header() {
     return (
-    <nav class="navbar   ">
-        <a class="navbar-brand" href="#">Navbaraaaaa</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"  aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class=" navbar-collapse " id="navbarNav">
-            <ul class="navbar-nav ">
-                <li class="nav-item ">
-                    <a class="nav-link" href="#">Home <span class="sr-only">Página atual</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Destaques</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Preços</a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="#">Desativado</a>
-                </li>
-            </ul>
-        </div>
-    </nav>);
+        // < !--Imagem e texto-- >
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""/>
+                    Bootstrap
+            </a>
+        </nav>
+    );
 }
 
-export default NavScrollExample;
+export default Header;
+
+

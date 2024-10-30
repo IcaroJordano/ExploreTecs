@@ -1,17 +1,26 @@
-export function CardProduto({nome,image,preco}) {
-    return(
-        <div className="w-5/12  lg:w-64 lg:mx-0 lg:ml-9 mt-6 mx-2 ">
-            <div className={` bg-white bg-center relative`}>
-                <img className=" object-cover " src={image} alt="" />
-                <span className="bg-black text-xs lg:text-sm scale-75 p-1 lg:px-2  absolute -top-2  -left-2 lg:-left-4 rounded-md text-white">15% OFF</span>
-            </div>
-            <h2 className=" line-clamp-2 text-base lg:text-base lg:items-center justify-center lg:flex lg:h-11  leading-none my-2 lg:my-0  font-normal w-10/12 lg:w-full   mx-auto text-center">{nome}</h2>
-            <h2 className="w-10/12  lg:my-0 my-1 mx-auto text-sm lg:text-lg text-center font-extrabold lg:font-semibold">
-                <del>R$99,00</del>
-                |
-                <span>R${preco}0</span>
-            </h2>
-            <h4 className="mx-auto w-10/12 lg:w-8/12 text-[10px] lg:text-[10px] text-neutral-500 text-center">6x de R$14,15 sem juros</h4>
-        </div>
+import Badge from 'react-bootstrap/Badge';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import imagem from '../images/imagem.jpeg'
+import { CardText } from 'react-bootstrap';
+
+export function CardProduto({ nome, image, preco }) {
+    return (
+        <a href="" className='w-5/12 lg:w-[300px] lg:ml-5 p-0 relative flex mt-3  '>
+            <Card className='border-none lg:mt-10' >
+                <Badge className='absolute -left-1 lg:-left-2 text-[9px] lg:text-xs lg:-top-2 -top-1' bg="dark">10% OFF</Badge>
+                <Card.Img className='h-40 lg:h-80 m-0' variant="top" src={'https://rsv-ink-images-production.s3.sa-east-1.amazonaws.com/images/product_v2/main_image/394aac6b4bf23b7a64b35c79e03e0568.webp'} />
+                <Card.Body className=' p-0'>
+                    <Card.Title className='m-0 text-base  lg"text-wrap  text-nowrap text text-ellipsis  justify-center    leading-none my-2 lg:my-0 overflow-clip  font-normal  lg:w-full    text-center' >Card TitleCard TitleCard TitleCard Tiaaaaaaaaaaaaaaaaaatle</Card.Title>
+                    <Card.Text className=' m-0 flex flex-nowrap text-wrap items-center justify-center text-center' >
+                        <em className='h6 font-bold items-center justify-center text-center flex  text-sm'><del>R$ 99,90</del></em>
+                        <em className='h6 items-center font-bold justify-center text-center flex  text-sm'>|R$ 79,90</em>
+                    </Card.Text >
+                    <CardText className=' items-center justify-center flex'>
+                        <em className=' text-[11px]  '> 6x de 13.99 sem juros</em>
+                    </CardText>
+                </Card.Body>
+            </Card>
+        </a>
     )
 }
