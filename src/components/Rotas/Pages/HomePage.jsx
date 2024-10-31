@@ -6,6 +6,7 @@ import { Filters } from '../../Home-Page/Filters';
 import { SectionPagination } from '../../Home-Page/Pagination';
 import { Footer } from '../../Home-Page/Footer';
 import { Home } from '../../Home-Page/Home';
+import { SectionButtons } from '../../Home-Page/Buttons';
 
 export function HomePage() {
 
@@ -17,6 +18,7 @@ export function HomePage() {
             <Produtos></Produtos>
             <SectionPagination></SectionPagination>
             <Footer></Footer>
+            <SectionButtons></SectionButtons>
         </section>
     );
 }
