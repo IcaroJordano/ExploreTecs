@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function Header() {
     return (
         <header className=' w-full bg-black overflow-visible z-50 fixed top-0'>
-            <div className='h-8 '> Lorem ipsum dolor sit amet consectetur </div>
+            <div className='h-8 flex justify-center text-white'> Lorem ipsum dolor sit amet consectetur </div>
             <div className=' justify-between flex w-full items-center '>
                 <Navbar expand="sm"  className="h-20 text-white z-50">
                     <Container className=' text-white'>
