@@ -8,7 +8,7 @@ export function SectionPagination(params) {
                 <Pagination.Item  className=' justify-center items-center flex   h-10 w-10  p-0 mx-1 text-red-500  ' >
                     1
                 </Pagination.Item>
-                <Pagination.Item  className=' justify-center items-center flex   h-10 w-10  p-0 mx-1 text-red-500  '  disabled>
+                <Pagination.Item  className=' justify-center items-center flex   h-10 w-10  p-0 mx-1 text-red-500  '  active>
                     2
                 </Pagination.Item>
                 <Pagination.Item  className=' justify-center items-center flex   h-10 w-10  p-0 mx-1 text-red-500  ' >
