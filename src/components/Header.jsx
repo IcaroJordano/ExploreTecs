@@ -8,13 +8,9 @@ import Col from 'react-bootstrap/Col';
 
 function Header() {
     return (
-        // < !--Imagem e texto-- >
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""/>
-                    Bootstrap
-            </a>
-        </nav>
+        <header className='h-28 w-full bg-pink-500  z-50 fixed top-0'>
+            a
+        </header>
     );
 }
 
